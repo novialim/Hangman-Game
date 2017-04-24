@@ -8,7 +8,7 @@
     <title>Movie Night Hangman</title>
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://bootswatch.com/cyborg/bootstrap.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -20,7 +20,42 @@
     <![endif]-->
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    
+    <header>
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <img class="img-rounded img-responsive" src="assets/images/movienighthangman.jpg" alt="Movie Night Hangman"> 
+    </header>
+
+    <section class="game">
+      <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-sm-12">
+              <h5 class='text-center'>PRESS ANY KEY TO GET STARTED!</h5>
+              <p class='' id="numOfWins">NUMBER OF WINS</p>
+              <div class='text-center' id="wordDisplay"></div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-7 col-sm-7">
+              <p>LETTERS ALREADY GUESSED: <span id="ltrGuessed"></span></p>
+            </div>
+            <div class="col-md-5 col-sm-5" id=textRight>
+              <p>NUMBER OF GUESSES LEFT: <span id="lives">12</span></p>
+            </div>
+            <div class="col-md-12 col-sm-12" id=displayStatus>
+              <p id="letterStatus"></p>
+              <p id="gameStatus"></p>
+            </div>
+          </div>
+
+          <div class='text-center' id="newGame">
+            <a class="btn btn-primary">Play Again!</a>
+          </div>
+
+        </div> <!-- End of container -->
+    </section>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>

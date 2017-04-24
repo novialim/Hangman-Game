@@ -1,0 +1,59 @@
+* { 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+     box-sizing: border-box; 
+}
+
+body {
+	padding-top:10px;
+}
+
+header img{
+	width: 18.750em;
+	display:block;
+	margin: 0 auto;
+}
+
+#wordDisplay {
+	margin: 24px 0;
+	font-size: 30px;
+	border: 2px dashed #ccc;
+	border-radius: 6px;
+	padding:20px;
+	letter-spacing: 30px;
+}
+
+#displayStatus {
+	text-align: center;
+}
+
+/*#textRight {
+	text-align: right;
+}*/
+
+#lives {
+	color: green;
+}
+
+#gameStatus {
+	margin-bottom: 5px;
+}
+
+.btnwin {
+	cursor: default;
+}
+
+.btnwin:hover {
+	background-color: #77b300;
+}
+
+.btnwin:active {
+  border-style: outset;
+  background-color: #77b300;
+  background-image: none;
+}
+
+.btnwin:focus {
+	background-color: #77b300;
+}
+
