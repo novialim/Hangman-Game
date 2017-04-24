@@ -1,7 +1,12 @@
 var wins=0;
 
 function movieNightHangman() {
-	var movies = ["The Wizard of Oz","Citizen Kane","The Third Man","Mad Max: Fury Road","All About Eve","Inside Out","The Godfather","Singing in the Rain","Casablanca","Boyhood","Snow White and the Seven Dwarfs","Moonlight","La Grande illusion","Gravity","The Maltese Falcon","Sunset Boulevard","King Kong","The Adventures of Robin Hood","Spotlight","Taxi Driver","Selma","Toy Story","Zootopia","Up","Alien","Hell or High Water","The Night of the Hunter","Rebecca","Frankenstein","The Conformist","Vertigo","Finding Nemo","Touch of Evil","The Force Awakens","Annie Hall","The Wrestler","Manchester by the Sea","The Dark Knight","The Hurt Locker","La La Land","Arrival","Skyfall","Gone With the Wind","Pinocchio","Brooklyn","Star Trek","Logan","Harry Potter and the Deathly Hallows","Man on Wire","Toy Story","The Jungle Book","Jaws","The Wrath of Khan", "The Undiscovered Country", "The Search of Spock", "A New Hope","The Empire Strikes Back", "Return of the Jedi", "Shawshank Redemption","The Force Awakens","The Last Jedi","Master and Commander: The Far Side of the World"];
+	// var movies = ["The Wizard of Oz","Citizen Kane","The Third Man","Mad Max: Fury Road","Inside Out","The Godfather","Singing in the Rain","Gravity","King Kong","The Adventures of Robin Hood","Spotlight","Taxi Driver","Selma","Toy Story","Zootopia","Up","Alien","Hell or High Water","The Night of the Hunter","Rebecca","Frankenstein","The Conformist","Vertigo","Finding Nemo","Touch of Evil","The Force Awakens","Annie Hall","The Wrestler","Manchester by the Sea","The Dark Knight","The Hurt Locker","La La Land","Arrival","Skyfall","Gone With the Wind","Pinocchio","Brooklyn","Star Trek","Logan","Harry Potter and the Deathly Hallows","Man on Wire","Toy Story","The Jungle Book","Jaws","The Wrath of Khan", "The Undiscovered Country", "The Search of Spock", "A New Hope","The Empire Strikes Back", "Return of the Jedi", "Shawshank Redemption","The Force Awakens","The Last Jedi","Master and Commander: The Far Side of the World"];
+
+	var movies = ["The Wizard of Oz","Citizen Kane","The Third Man","Mad Max: Fury Road","Inside Out","The Godfather","Singing in the Rain"];
+	var lowerMovies = [];
+
+	var soundtrack = ["WizardofOz-SomewhereOverTheRainbow.mp3","Overture_CitizenKane.mp3","TheThirdMan.mp3","Survive_MadMax.mp3","InsideOutBundleofJoy.mp3","TheGodfatherOriginalThemeSong.mp3","SingingInTheRain.mp3"]
 
 	game = {
 		guessedWord	: movies[Math.floor(Math.random()*movies.length)].toLowerCase(),
@@ -12,6 +17,14 @@ function movieNightHangman() {
 		gamewin: false
 	};
 
+	for (var i=0; i<movies.length; i++) {
+  		lowerMovies[i]=movies[i].toLowerCase();
+	}
+
+	playtrack = soundtrack[lowerMovies.indexOf(game.guessedWord)];
+	winAudio = new Audio('assets/audio/'+playtrack);
+
+	console.log(winAudio);
 	console.log(game.guessedWord);
 
 	showLives = document.getElementById('lives');
@@ -90,6 +103,7 @@ function movieNightHangman() {
 					numOfWins.className = "text-center";
 					numOfWins.innerHTML = "<span class='text-success'> NUMBER OF WINS: " +wins + "</span>";
 					game.gamewin = true;
+					winAudio.play();
 					console.log(wins);
 				} 				
 
@@ -99,8 +113,6 @@ function movieNightHangman() {
  		
 	 }	
  	} // End of if(game.lives > 0)
-
-
 
 // Reset 
 document.getElementById('newGame').onclick = function() {
@@ -118,6 +130,7 @@ document.getElementById('newGame').onclick = function() {
 	showGuessed.innerHTML = "";
 	showLives.innerHTML = game.lives;
 	showStatus.className = "";
+	winAudio.pause();
 
 	movieNightHangman();	
 }
