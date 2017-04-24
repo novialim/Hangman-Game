@@ -1,12 +1,12 @@
 var wins=0;
 
 function movieNightHangman() {
-	// var movies = ["The Wizard of Oz","Citizen Kane","The Third Man","Mad Max: Fury Road","Inside Out","The Godfather","Singing in the Rain","Gravity","King Kong","The Adventures of Robin Hood","Spotlight","Taxi Driver","Selma","Toy Story","Zootopia","Up","Alien","Hell or High Water","The Night of the Hunter","Rebecca","Frankenstein","The Conformist","Vertigo","Finding Nemo","Touch of Evil","The Force Awakens","Annie Hall","The Wrestler","Manchester by the Sea","The Dark Knight","The Hurt Locker","La La Land","Arrival","Skyfall","Gone With the Wind","Pinocchio","Brooklyn","Star Trek","Logan","Harry Potter and the Deathly Hallows","Man on Wire","Toy Story","The Jungle Book","Jaws","The Wrath of Khan", "The Undiscovered Country", "The Search of Spock", "A New Hope","The Empire Strikes Back", "Return of the Jedi", "Shawshank Redemption","The Force Awakens","The Last Jedi","Master and Commander: The Far Side of the World"];
+	// var movies = ["The Wizard of Oz","Citizen Kane","The Third Man","Mad Max: Fury Road","Inside Out","The Godfather","Singing in the Rain","Gravity","King Kong","The Adventures of Robin Hood","Spotlight","Taxi Driver","Selma","Toy Story","Zootopia","Up","Alien","Hell or High Water","The Night of the Hunter","Rebecca","Frankenstein","The Conformist","Vertigo","Finding Nemo","Touch of Evil","The Force Awakens","Annie Hall","The Wrestler","Manchester by the Sea","The Dark Knight","The Hurt Locker","La La Land","Arrival","Gone With the Wind","Pinocchio","Brooklyn","Logan","Man on Wire","Toy Story","The Jungle Book","Jaws","The Wrath of Khan", "The Undiscovered Country", "A New Hope", "Shawshank Redemption","The Last Jedi","Master and Commander: The Far Side of the World"];
 
-	var movies = ["The Wizard of Oz","Citizen Kane","The Third Man","Mad Max: Fury Road","Inside Out","The Godfather","Singing in the Rain"];
+	var movies = ["The Wizard of Oz","Citizen Kane","The Third Man","Mad Max: Fury Road","Inside Out","The Godfather","Singing in the Rain","The Empire Strikes Back", "Return of the Jedi","The Force Awakens","Skyfall","The Search for Spock","The Voyage Home","The Final Frontier","Harry Potter and the Deathly Hallows","Harry Potter and the Philosopher's Stone","The Last Jedi"];
 	var lowerMovies = [];
 
-	var soundtrack = ["WizardofOz-SomewhereOverTheRainbow.mp3","Overture_CitizenKane.mp3","TheThirdMan.mp3","Survive_MadMax.mp3","InsideOutBundleofJoy.mp3","TheGodfatherOriginalThemeSong.mp3","SingingInTheRain.mp3"]
+	var soundtrack = ["WizardofOz-SomewhereOverTheRainbow.mp3","Overture_CitizenKane.mp3","TheThirdMan.mp3","Survive_MadMax.mp3","InsideOutBundleofJoy.mp3","TheGodfatherOriginalThemeSong.mp3","SingingInTheRain.mp3","SWThemeIntro.mp3","TheBattleofEndorIReturnoftheJedi.mp3","TheForceAwakensScherzoforXWings.mp3","Adele_Skyfall.mp3","StarTrek.mp3","StarTrek.mp3","StarTrek.mp3","HarryPotter.mp3","HarryPotter.mp3","SWThemeIntro.mp3"]
 
 	game = {
 		guessedWord	: movies[Math.floor(Math.random()*movies.length)].toLowerCase(),
