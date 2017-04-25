@@ -57,9 +57,10 @@ function movieNightHangman() {
 
  	// game play
  	document.onkeyup = function(event) {
+ 		var key = event.keyCode;
  		var guess = String.fromCharCode(event.keyCode).toLowerCase();
 
- 	if((game.lives > 0)&& (game.gamewin==false)){	
+ 	if((game.lives > 0) && (game.gamewin==false) && (key>64 && key<91)){	
  		if(game.guessedltr.indexOf(guess) != -1){
  			showStatus.innerHTML = "<span class='text-warning'> Come on! You have already guess letter " + guess + ". Try again. </span>";
  		} else {
